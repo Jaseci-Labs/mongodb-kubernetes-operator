@@ -69,6 +69,8 @@ spec:
           runAsUser: 2000
           allowPrivilegeEscalation: false
       securityContext:
+        runAsNonRoot: true
+        fsGroup: 65534
         seccompProfile:
           type: RuntimeDefault
       serviceAccountName: mongodb-kubernetes-operator
